@@ -7,6 +7,7 @@
 #include <thread>
 #include <vector>
 #include <sstream>
+//#include "core/platform/env.h"
 #include "core/common/common.h"
 #include "core/common/logging/logging.h"
 #include "core/framework/allocation_planner.h"
@@ -302,6 +303,10 @@ Status SequentialExecutor::Execute(const SessionState& session_state, const std:
       Status compute_status;
 
       ORT_TRY {
+        //std::cout << "Name: " << node.Name() << ", Type: " << node.OpType() << std::endl;
+        //if (node.Name() == "node1_Grad/Cast_2" || node.Name() == "node1_Grad/Cast_4") {
+        //  Env::Default().SleepForMicroseconds(10);
+        //}
         compute_status = p_op_kernel->Compute(&op_kernel_context);
       }
       ORT_CATCH(const std::exception& ex) {
