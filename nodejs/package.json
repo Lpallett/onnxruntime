@@ -67,6 +67,6 @@
     "typescript": "^3.8.3"
   },
   "dependencies": {
-    "prebuild-install": "^5.3.3"
+    "prebuild-install": "^5.3.6"
   }
 }
