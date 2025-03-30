@@ -1,6 +1,6 @@
 numpy==1.16.6
 mypy
 pytest
-onnx==1.7.0
+onnx==1.17.0
 protobuf
 
