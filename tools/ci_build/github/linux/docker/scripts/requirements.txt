@@ -6,3 +6,4 @@ setuptools>=41.4.0
 wheel
 onnx==1.7.0
 argparse
+protobuf>=4.25.8 # not directly required, pinned by Snyk to avoid a vulnerability
